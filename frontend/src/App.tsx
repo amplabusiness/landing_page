@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import { supabase } from './lib/supabase'
+import { CalculadoraImpacto } from './components/CalculadoraImpacto'
+import { NoticiasReforma } from './components/NoticiasReforma'
 import './index.css'
 
 // Funcao para inserir lead
@@ -255,6 +257,9 @@ export default function App() {
         </div>
       </section>
 
+      {/* CALCULADORA DE IMPACTO */}
+      <CalculadoraImpacto />
+
       {/* COMO FUNCIONA */}
       <section id="como-funciona" className="py-20 bg-slate-950">
         <div className="max-w-7xl mx-auto px-6">
@@ -375,6 +380,9 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* NOTICIAS DA REFORMA */}
+      <NoticiasReforma />
 
       {/* FORMULARIO */}
       <section id="teste" className="py-20 bg-slate-950">
