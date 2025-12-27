@@ -1,0 +1,118 @@
+/* Fonte Inter do Google Fonts - deve vir primeiro */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss" source("../");
+
+/* Temas customizados Contta - Design Aprovado Claude.ia */
+@theme {
+  /* Cores Contta - Paleta Oficial */
+  --color-contta-50: #E6F4FA;
+  --color-contta-100: #CCE9F5;
+  --color-contta-200: #99D3EB;
+  --color-contta-300: #7BBFCF;
+  --color-contta-400: #2BA3B8;
+  --color-contta-500: #1B5E7D;
+  --color-contta-600: #164D68;
+  --color-contta-700: #113D53;
+  --color-contta-800: #0C2D3E;
+  --color-contta-900: #071D29;
+
+  /* Slate - para backgrounds */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+
+  /* Cores de acento */
+  --color-red-400: #f87171;
+  --color-red-500: #ef4444;
+  --color-green-400: #4ade80;
+  --color-green-500: #22c55e;
+
+  /* Fontes */
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom Utilities */
+@utility text-gradient {
+  background: linear-gradient(135deg, #2BA3B8 0%, #7BBFCF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@utility gradient-contta {
+  background: linear-gradient(135deg, #1B5E7D 0%, #2BA3B8 50%, #7BBFCF 100%);
+}
+
+@utility glass {
+  background: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@utility glass-dark {
+  background: rgba(15, 23, 42, 0.8);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+/* Reset e Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Animacoes customizadas */
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 5s ease infinite;
+}

@@ -1,10 +1,26 @@
 # Dependências
 node_modules/
+.pnpm-store/
 
-# Ambiente
+# Ambiente - NUNCA COMMITAR!
 .env
+.env.*
 .env.local
 .env.*.local
+.env.production
+.env.development
+*.env
+
+# Credenciais e chaves
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+*_credentials.json
+*_secret*
 
 # Build
 dist/
@@ -25,3 +41,5 @@ Thumbs.db
 
 # Claude
 .claude/
+
+.vercel
