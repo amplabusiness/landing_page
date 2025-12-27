@@ -1,0 +1,27 @@
+# Dependências
+node_modules/
+
+# Ambiente
+.env
+.env.local
+.env.*.local
+
+# Build
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Supabase local
+.supabase/
+
+# Vercel
+.vercel/
+
+# Claude
+.claude/
