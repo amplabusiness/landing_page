@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { supabase } from './lib/supabase'
 import { CalculadoraImpacto } from './components/CalculadoraImpacto'
 import { NoticiasReforma } from './components/NoticiasReforma'
+import { GerenciadorCreditos } from './components/GerenciadorCreditos'
 import './index.css'
 
 // Funcao para inserir lead
