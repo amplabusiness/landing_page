@@ -128,7 +128,8 @@ export default function App() {
             <img src="/logo-contta.png" alt="Contta" className="h-14" />
           </a>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#como-funciona" className="text-slate-300 hover:text-white transition-colors">Como Funciona</a>
+            <a href="#calculadora" className="text-slate-300 hover:text-white transition-colors">Calculadora</a>
+            <a href="#creditos" className="text-slate-300 hover:text-white transition-colors">Creditos IBS/CBS</a>
             <a href="#planos" className="text-slate-300 hover:text-white transition-colors">Planos</a>
             <a href="#teste" className="gradient-contta text-white px-5 py-2.5 rounded-full font-medium hover:opacity-90">
               Teste Gratis
@@ -294,6 +295,9 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* GERENCIADOR DE CREDITOS IBS/CBS */}
+      <GerenciadorCreditos />
 
       {/* PLANOS */}
       <section id="planos" className="py-20 bg-slate-900">
