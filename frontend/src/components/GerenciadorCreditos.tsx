@@ -1,11 +1,10 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  Receipt, Plus, Trash2, Calculator, TrendingUp, TrendingDown,
-  DollarSign, FileText, CheckCircle, AlertCircle, Info,
-  ChevronDown, ChevronUp, Loader2, PieChart
+  Receipt, Plus, Trash2, Calculator,
+  DollarSign, AlertCircle, Info,
+  Loader2, PieChart
 } from 'lucide-react'
-import { supabase } from '../lib/supabase'
 
 // Categorias de despesas padrão
 const CATEGORIAS = [
@@ -56,7 +55,6 @@ export function GerenciadorCreditos() {
   const [despesas, setDespesas] = useState<Despesa[]>([])
   const [receita, setReceita] = useState('')
   const [reducaoAliquota, setReducaoAliquota] = useState(0) // 0, 30 ou 60
-  const [regime, setRegime] = useState('lucro_presumido')
   const [presuncao, setPresuncao] = useState(32) // Base presumida %
 
   const [resultado, setResultado] = useState<Resultado | null>(null)
